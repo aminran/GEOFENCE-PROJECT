@@ -1,0 +1,180 @@
+body{
+    margin: 0px;
+    padding: 20px;
+    background-color: 	rgb(13, 2, 2);
+    color:rgb(253, 255, 254);
+    width:100%;
+    height:100%;
+}
+
+h2{
+    padding:0px;
+    margin:0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:24px;
+    font-weight: bold;
+}
+
+#controlPanel{
+    position: absolute;
+    width:100%;
+    height: 87.8%;
+    display: inline-block;
+    flex-direction: column;
+    border:1px solid blue;
+    background-color: rgb(2, 2, 59);
+}
+
+#table-element{
+    order: 1;
+    position: relative;
+    width:30%;
+    height: 100%;
+    border:1px solid blue;
+    overflow-y:scroll;
+    background: linear-gradient(to top right,rgb(56, 108, 128),rgb(2, 2, 59));
+    display: inline-block;
+}
+
+#map-element{
+    order: 2;
+    position: relative;
+    border:1px solid blue;
+    width: 69.5%;
+    height: 100%;
+    background-color: yellowgreen;
+    display: inline-block;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.infoPanel{
+    width:100%;
+    border:2px solid darkslateblue;
+    fill: aliceblue;
+}
+
+th{
+    text-align: center;
+    padding:6px;
+}
+
+td{
+    padding:10px;
+    width:200px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid rgba(135, 206, 235, 0.3);
+}
+
+#addr_container{
+        overflow-y:scroll;
+        /* padding:5px 5px 5px 5px; */
+    }
+
+#addr_container::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+/* Track */
+#addr_container::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+/* Handle */
+#addr_container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.scroll-top {
+    position: fixed;
+    top: 0vh;
+    right: 0px;
+    z-index: 1;
+    visibility:hidden;
+}
+.scroll-top img {
+    width: 0px;
+    height: 0px;
+    cursor: pointer;
+    opacity: 0.5;
+    visibility:hidden;
+}
+.scroll-bottom {
+    position: fixed;
+    top: 0vh;
+    right: 0px;
+    z-index: 0;
+    visibility:hidden;
+}
+.scroll-bottom img {
+    width: 0px;
+    height: 0px;
+    cursor: pointer;
+    opacity: 0;
+    visibility:hidden;
+}
+
+@media (max-width: 1080px) {
+    #table-element {
+        order: 1;
+        width:100%;
+    }
+
+    #map-element {
+        order: 2;
+        width:100%;
+    }
+    td{
+        width:50%;
+        font-size: 14px;
+        font-family: 'Roboto', sans-serif;
+        border: 2px solid rgb(185, 227, 243);
+    }
+
+    .scroll-top {
+        position: fixed;
+        top: 40vh;
+        right: 30px;
+        z-index: 1;
+    }
+    .scroll-top img {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        opacity: 0.5;
+        visibility:visible;
+    }
+    .scroll-bottom {
+        position: fixed;
+        top: 48vh;
+        right: 30px;
+        z-index: 1;
+    }
+    .scroll-bottom img {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        opacity: 0.5;
+        visibility:visible;
+    }
+}
+
+button{
+    background-color: rgb(105, 7, 31);
+    color:rgb(255, 255, 255);
+    float: center;
+}
+
+/* Custom CSS for success notifications */
+.toast-success {
+    background-color: white !important;
+    color:#8B0000 !important;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: left !important;
+    /* width: 600px !important; */
+}
